@@ -95,6 +95,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _Animation_Speed: 0.749
@@ -139,6 +140,7 @@ Material:
     - _TwirlDistort: 112.6
     - _TwirlStr: 10
     - _WorkflowMode: 1
+    - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     m_Colors:
     - Color_85C936A7: {r: 0, g: 1.7353821, b: 4, a: 0}
