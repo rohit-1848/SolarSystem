@@ -1,11 +1,11 @@
 //Based on noises pack https://github.com/JimmyCushnie/Noisy-Nodes
 
-float4 mod(float4 x, float4 y)
+float4 Custommod(float4 x, float4 y)
 {
   return x - y * floor(x / y);
 }
 
-float3 mod(float3 x, float3 y)
+float3 Custommod(float3 x, float3 y)
 {
   return x - y * floor(x / y);
 }
@@ -284,8 +284,8 @@ float cnoise(float3 P)
 // Classic Perlin noise, periodic variant
 float pnoise(float3 P, float3 rep)
 {
-  float3 Pi0 = mod(floor(P), rep); // Integer part, modulo period
-  float3 Pi1 = mod(Pi0 + (float3)1.0, rep); // Integer part + 1, mod period
+  float3 Pi0 = Custommod(floor(P), rep); // Integer part, modulo period
+  float3 Pi1 = Custommod(Pi0 + (float3)1.0, rep); // Integer part + 1, mod period
   Pi0 = mod289(Pi0);
   Pi1 = mod289(Pi1);
   float3 Pf0 = frac(P); // Fractional part for interpolation
